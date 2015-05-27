@@ -1,0 +1,20 @@
+{
+  "name": "toner",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "script-manager": "^0.3.1",
+    "streamifier": "^0.1.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^6.0.3"
+  }
+}

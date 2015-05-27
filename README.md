@@ -37,6 +37,8 @@ You can write your own engine or use an existing one:
 - [toner-handlebars](https://github.com/jsreport/toner-handlebars)
 - [toner-jsrender](https://github.com/jsreport/toner-jsrender)
 
+Note that templating engine runs safely in another sand-boxed process. You don't have to be afraid to run user defined templates. See [script-manager](https://github.com/pofider/node-script-manager) for details.
+
 ###Recipes
 The actual printing of the document into pdf, excel or any other type of the document is done by something we call **recipe**. The recipe also needs to be registered first.
 
@@ -114,9 +116,9 @@ http.createServer(function (req, res) {
 It is expected there will soon popup other packages hooking into the Toner and adding additional functionality. For this case Toner provides several hooks which can be used to extend it.
 
 ```js
-toner.before(function(req) { ... });
-toner.after(function(req, res) { ... });
-toner.afterEngine(function(req, res) { ... });
+toner.before(function(req, res, cb) { ... });
+toner.after(function(req, res, cb) { ... });
+toner.afterEngine(function(req, res, cb) { ... });
 ``` 
 
 ##Options
@@ -127,6 +129,7 @@ var toner = require("toner")({ ... });
 
 Possible options:
 - `tempDirectory` - this attribute is used by the recipes to store temporary files
+- options passed to the [script-manager](https://github.com/pofider/node-script-manager) depndency
 
 
 ##Tests

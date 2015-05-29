@@ -1,7 +1,7 @@
 module.exports = function(options) {
-    var brewer = require("./lib/toner");
-    brewer.init(options || {});
-    return brewer;
+    var toner = require("./lib/toner");
+    toner.init(options || {});
+    return toner;
 };
 
 module.exports.noneEngine = require("path").join(__dirname, "lib/noneEngine");

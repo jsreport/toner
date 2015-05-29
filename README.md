@@ -1,4 +1,4 @@
-#toner
+#jsreport toner
 [![Build Status](https://travis-ci.org/jsreport/toner.png?branch=master)](https://travis-ci.org/jsreport/toner)
 
 **[node](https://nodejs.org/) library for dynamic assembling documents and printing them into various formats** 

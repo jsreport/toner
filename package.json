@@ -1,6 +1,6 @@
 {
   "name": "toner",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Dynamic documents assembling and printing into various formats",
   "keywords": [
     "jsreport",

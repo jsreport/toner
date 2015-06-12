@@ -53,7 +53,7 @@ You can also write your own recipe or use an existing one:
 - [toner-wkhtmltopdf](https://github.com/jsreport/toner-wkhtmltopdf)
 
 ###Render
-The complete document generation is invoked using `tuner.render` function:
+The complete document generation is invoked using `toner.render` function:
 ```js
 toner.render({
     template: { 

@@ -9,11 +9,11 @@ describe('index', function(){
     });
 
     it("calling index function should return brewer", function(done) {
-        var brewer = index();
-        brewer.engine("none", index.noneEngine);
-        brewer.recipe("html", index.htmlRecipe);
+        var toner = index();
+        toner.engine("none", index.noneEngine);
+        toner.recipe("html", index.htmlRecipe);
 
-        brewer.render({ template: { content: "foo", recipe: "html", engine: "none"}}, function(err, res) {
+        toner.render({ template: { content: "foo", recipe: "html", engine: "none"}}, function(err, res) {
             if (err)
                 return done(err);
 

@@ -8,6 +8,12 @@ describe('index', function(){
         done();
     });
 
+    it("returned tuner should not be singleton", function(done) {
+        index().engine("none", index.noneEngine);
+        index().engine("none", index.noneEngine);
+        done();
+    });
+
     it("calling index function should return brewer", function(done) {
         var toner = index();
         toner.engine("none", index.noneEngine);

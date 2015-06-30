@@ -39,6 +39,17 @@ You can write your own engine or use an existing one:
 
 Note that templating engine runs safely in another sand-boxed process. You don't have to be afraid to run user defined templates. See [script-manager](https://github.com/pofider/node-script-manager) for details.
 
+You can register and use `none` engine to skip its processing:
+
+```js
+toner.engine('none', toner.noneEngine);
+toner.render({
+  template: {
+    engine: 'none'   
+    ...
+  }
+```
+
 ###Recipes
 The actual printing of the document into pdf, excel or any other type of the document is done by something we call **recipe**. The recipe also needs to be registered first.
 
@@ -51,6 +62,17 @@ You can also write your own recipe or use an existing one:
 - [toner-phantom](https://github.com/jsreport/toner-phantom)
 - [toner-html-to-xlsx](https://github.com/jsreport/toner-html-to-xlsx)
 - [toner-wkhtmltopdf](https://github.com/jsreport/toner-wkhtmltopdf)
+
+You can use `html` recipe to simply produce html:
+
+```js
+toner.recipe("html", index.htmlRecipe);
+toner.render({
+  template: {
+    recipe: 'html'   
+    ...
+  }
+```
 
 ###Render
 The complete document generation is invoked using `toner.render` function:

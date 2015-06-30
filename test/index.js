@@ -3,7 +3,7 @@ var index =  require("../");
 
 describe('index', function(){
 
-    it("calling index function should return brewer", function(done) {
+    it("calling index function should return toner", function(done) {
         index().recipe.should.be.ok;
         done();
     });
@@ -14,7 +14,7 @@ describe('index', function(){
         done();
     });
 
-    it("calling index function should return brewer", function(done) {
+    it("index should include noneEngine and htmlRecipe", function(done) {
         var toner = index();
         toner.engine("none", index.noneEngine);
         toner.recipe("html", index.htmlRecipe);

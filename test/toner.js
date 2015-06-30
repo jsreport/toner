@@ -100,4 +100,17 @@ describe('toner', function(){
             done();
         });
     });
+
+    it("toner should include noneEngine and htmlRecipe", function(done) {
+        toner.engine("none", toner.noneEngine);
+        toner.recipe("html", toner.htmlRecipe);
+
+        toner.render({ template: { content: "foo", recipe: "html", engine: "none"}}, function(err, res) {
+            if (err)
+                return done(err);
+
+            res.content.toString().should.be.eql("foo");
+            done();
+        });
+    });
 });

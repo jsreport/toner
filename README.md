@@ -66,7 +66,7 @@ You can also write your own recipe or use an existing one:
 You can use `html` recipe to simply produce html:
 
 ```js
-toner.recipe("html", index.htmlRecipe);
+toner.recipe("html", toner.htmlRecipe);
 toner.render({
   template: {
     recipe: 'html'   

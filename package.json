@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "mkdirp": "0.5.1",
-    "script-manager": "0.4.3",
+    "script-manager": "0.4.4",
     "streamifier": "0.1.1"
   },
   "devDependencies": {

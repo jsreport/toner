@@ -1,6 +1,11 @@
 #jsreport toner
 [![Build Status](https://travis-ci.org/jsreport/toner.png?branch=master)](https://travis-ci.org/jsreport/toner)
 
+
+##Deprecation note
+This package is not being developed anymore. We recommend to use [jsreport-core](https://github.com/jsreport/jsreport-core) instead. It has almost the same API but with many more recipes, extensions and recipes.
+
+##jsreport toner
 **[node](https://nodejs.org/) library for dynamic assembling documents and printing them into various formats** 
 (written for [jsreport](http://jsreport.net))
 
